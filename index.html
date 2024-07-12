@@ -1,0 +1,109 @@
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+        <title>Wedding Tarot</title>
+
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+           
+           html{
+            background: url(images/back.jpg) center center ;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            width: 100%;
+                min-height: 100%;
+                height: 100vh;
+                margin: 0;
+                padding: 0;
+           }
+            body{
+               
+                font-family: 'Merriweather', serif;
+                text-align: center;
+                width: 100%;
+                min-height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+
+            h1{
+                font-size: 5em;
+                color:#702121;
+                margin-bottom: 10px;
+            }
+
+            p{
+                font-size: 1.5em;
+                width: 80%;
+                margin: auto;
+                color:#272727;
+            }
+            img {
+                cursor: pointer;
+                border-radius: 20px;
+                box-shadow: 0px 0px 15px #666;
+
+                view-timeline-name: --reveal;
+                animation-name: show;
+                animation-fill-mode: both;
+
+                animation-timeline: --reveal;
+                animation-range: entry 25% cover 100%;
+            }
+
+
+            .card-container{
+                display: flex;
+                justify-content: center;
+                align-self: center;
+                flex-direction: column;
+
+            }
+
+
+            @keyframes show {
+                from {
+                    scale: 10%;
+                }
+                to {
+                    scale:100%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Welcome</h1>
+        <p>Please press on the card when the ceremony officiant shows it on the table:</p>
+        <div class="card-container">
+            <img src="images/0.jpg" />
+            <img src="images/1.jpg" onclick="playAudio(1)" />
+            <img src="images/2.jpg" onclick="playAudio(2)" />
+            <img src="images/3.jpg" onclick="playAudio(3)" />
+            <img src="images/4.jpg" onclick="playAudio(4)" />
+            <img src="images/5.jpg" onclick="playAudio(5)" />
+            <img src="images/6.jpg" onclick="playAudio(6)" />
+            <img src="images/7.jpg" onclick="playAudio(7)" />
+            <img src="images/8.jpg" onclick="playAudio(8)" />
+            <img src="images/9.jpg" onclick="playAudio(9)" />
+            <img src="images/10.jpg" onclick="playAudio(10)" />
+        </div>
+
+        <script>
+            var audios = [];
+
+            // Precargar audios
+            for (var i = 1; i <= 10; i++) {
+                audios[i] = new Audio('audio/' + i + '.mp3');
+                audios[i].preload = 'auto';
+            }
+            
+            function playAudio(card) {
+                if (audios[card]) {
+                    audios[card].play();
+                }
+            }
+        </script>
+    </body>
+</html>
