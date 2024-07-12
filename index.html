@@ -1,109 +1,120 @@
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-        <title>Wedding Tarot</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>document.getElementsByTagName("html")[0].className += " js";</script>
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Roboto:400,700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+.stack-cards__item{
+  padding-bottom: 100%;
+  background-color: transparent;
+  box-shadow: none;
+}
 
-        <style>
-            @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
-           
-           html{
-            background: url(images/back.jpg) center center ;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-attachment: fixed;
-            width: 100%;
-                min-height: 100%;
-                height: 100vh;
-                margin: 0;
-                padding: 0;
-           }
-            body{
-               
-                font-family: 'Merriweather', serif;
-                text-align: center;
-                width: 100%;
-                min-height: 100%;
-                margin: 0;
-                padding: 0;
-            }
+.stack-cards__item img{
+  height: 100%;
+  width: auto;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border-radius: 15px;
+  box-shadow: 0px 0px 15px #111111;
+}
 
-            h1{
-                font-size: 5em;
-                color:#702121;
-                margin-bottom: 10px;
-            }
+  </style>
+  <title>Wedding | Angélica & Nick</title>
+</head>
+<body data-theme="dark">
+  <main class="padding-y-xl">
+    <div class="container max-width-adaptive-sm margin-bottom-lg">
+      <div class="text-component text-center">
+        <h1 class="text-xxxl">Welcome</h1>
+        <p class="text-md">Please press on the card when the ceremony officiant shows it on the table:</p>
+      </div>
+    </div>
+  
+    <div class="container max-width-adaptive-md margin-bottom-lg">
+      <ul class="stack-cards js-stack-cards">
+        <li data-theme="default" class="stack-cards__item bg radius-lg shadow-md js-stack-cards__item">
+          <img src="assets/img/0.jpg" />
+        </li>
+      
+        <li data-theme="default" class="stack-cards__item bg radius-lg shadow-md js-stack-cards__item">
+          <img src="assets/img/1.jpg" onclick="playAudio(1)" />
+        </li>
 
-            p{
-                font-size: 1.5em;
-                width: 80%;
-                margin: auto;
-                color:#272727;
-            }
-            img {
-                cursor: pointer;
-                border-radius: 20px;
-                box-shadow: 0px 0px 15px #666;
+        <li data-theme="default" class="stack-cards__item bg radius-lg shadow-md js-stack-cards__item">
+          <img src="assets/img/2.jpg" onclick="playAudio(2)" />
+        </li>
 
-                view-timeline-name: --reveal;
-                animation-name: show;
-                animation-fill-mode: both;
+        <li data-theme="default" class="stack-cards__item bg radius-lg shadow-md js-stack-cards__item">
+          <img src="assets/img/3.jpg" onclick="playAudio(3)" />
+        </li>
 
-                animation-timeline: --reveal;
-                animation-range: entry 25% cover 100%;
-            }
+        <li data-theme="default" class="stack-cards__item bg radius-lg shadow-md js-stack-cards__item">
+          <img src="assets/img/4.jpg" onclick="playAudio(4)" />
+        </li>
 
+        <li data-theme="default" class="stack-cards__item bg radius-lg shadow-md js-stack-cards__item">
+          <img src="assets/img/5.jpg" onclick="playAudio(5)" />
+        </li>
 
-            .card-container{
-                display: flex;
-                justify-content: center;
-                align-self: center;
-                flex-direction: column;
+        <li data-theme="default" class="stack-cards__item bg radius-lg shadow-md js-stack-cards__item">
+          <img src="assets/img/6.jpg" onclick="playAudio(6)" />
+        </li>
 
-            }
+        <li data-theme="default" class="stack-cards__item bg radius-lg shadow-md js-stack-cards__item">
+          <img src="assets/img/7.jpg" onclick="playAudio(7)" />
+        </li>
 
+        <li data-theme="default" class="stack-cards__item bg radius-lg shadow-md js-stack-cards__item">
+          <img src="assets/img/8.jpg" onclick="playAudio(8)" />
+        </li>
 
-            @keyframes show {
-                from {
-                    scale: 10%;
-                }
-                to {
-                    scale:100%;
-                }
-            }
-        </style>
-    </head>
-    <body>
-        <h1>Welcome</h1>
-        <p>Please press on the card when the ceremony officiant shows it on the table:</p>
-        <div class="card-container">
-            <img src="images/0.jpg" />
-            <img src="images/1.jpg" onclick="playAudio(1)" />
-            <img src="images/2.jpg" onclick="playAudio(2)" />
-            <img src="images/3.jpg" onclick="playAudio(3)" />
-            <img src="images/4.jpg" onclick="playAudio(4)" />
-            <img src="images/5.jpg" onclick="playAudio(5)" />
-            <img src="images/6.jpg" onclick="playAudio(6)" />
-            <img src="images/7.jpg" onclick="playAudio(7)" />
-            <img src="images/8.jpg" onclick="playAudio(8)" />
-            <img src="images/9.jpg" onclick="playAudio(9)" />
-            <img src="images/10.jpg" onclick="playAudio(10)" />
-        </div>
+        <li data-theme="default" class="stack-cards__item bg radius-lg shadow-md js-stack-cards__item">
+          <img src="assets/img/9.jpg" onclick="playAudio(9)" />
+        </li>
 
-        <script>
-            var audios = [];
+        <li data-theme="default" class="stack-cards__item bg radius-lg shadow-md js-stack-cards__item">
+          <img src="assets/img/10.jpg" onclick="playAudio(10)" />
+        </li>
+      </ul>
+    </div>
+  </main>
 
-            // Precargar audios
-            for (var i = 1; i <= 10; i++) {
-                audios[i] = new Audio('audio/' + i + '.mp3');
-                audios[i].preload = 'auto';
-            }
-            
-            function playAudio(card) {
-                if (audios[card]) {
-                    audios[card].play();
-                }
-            }
-        </script>
-    </body>
+<script src="assets/js/scripts.js"></script>
+
+<script>
+  var audios = [];
+
+  // Precargar audios
+  for (var i = 1; i <= 10; i++) {
+      audios[i] = new Audio('assets/audio/' + i + '.mp3');
+      audios[i].preload = 'auto';
+  }
+  
+  function playAudio(card) {
+    // stop all sounds
+      for (var i = 1; i <= 10; i++) {
+        if(card !== i){
+          audios[i].pause();
+          audios[i].currentTime = 0;
+        }  
+      }
+      if (audios[card]) {
+          // if playing paused
+          if (audios[card].paused) {
+              audios[card].play();
+          } else {
+              audios[card].pause();
+          }
+      }
+  }
+
+</script>
+</body>
 </html>
